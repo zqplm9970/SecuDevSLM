@@ -1,6 +1,6 @@
 # SecuDevSLM
 <img src="./docs/fig1.png">
-**SecuDevSLM** is a security testing framework for Small Language Models (SLMs) deployed on edge devices (iOS and Android). It simulates adversarial attacks such as hallucination and jailbreaks to evaluate model reliability under realistic conditions.
+SecuDevSLM is a security testing framework for Small Language Models (SLMs) deployed on edge devices (iOS and Android). It simulates adversarial attacks such as hallucination and jailbreaks to evaluate model reliability under realistic conditions.
 
 ---
 
