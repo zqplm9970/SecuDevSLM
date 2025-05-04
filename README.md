@@ -8,6 +8,7 @@
 
 SecuDevSLM systematically evaluates the vulnerability of on-device small language models (SLMs) through automated adversarial scenario generation. It supports comprehensive testing including multi-turn hallucination attacks, content and code jailbreaks, and platform-level robustness analysis. It also provides insights into the effects of training data diversity, model size, and runtime environments on security.
 
+[![Paper](http://img.shields.io/badge/cs.LG-1.0Paper(SIGMOD'24)-B31B1B?logo=arxiv&logoColor=red)]()
 ---
 
 ## 🚀 Features
