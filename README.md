@@ -66,7 +66,7 @@ Where:
 
 This formulation reflects both the scale and variety of training data, and their compound effect on model robustness and safety under adversarial attacks.
 
-📄 *Full model list is available in [Appendix](./docs/appendix.pdf).*
+📄 *Full model list is available in [Appendix](./docs/Appendix.pdf).*
 
 ---
 
