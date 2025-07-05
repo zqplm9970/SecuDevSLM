@@ -102,7 +102,7 @@ tester.execute_full_test_battery()
 
 
 ### 2. multilingual_semantic_noise_attack_with_context (Multilingual Semantic Noise Attack)
-<img src="./docs/image.png">
+<img src="./docs/fig2.png">
 This component constructs high-entropy multilingual prefixes using words from 15+ languages and special symbols to pollute input prompts. Despite preserving the original input semantics, it induces hallucinated or broken outputs.
 
 - Supports randomized word sampling across multiple languages
@@ -195,5 +195,5 @@ Evaluates attack behavior trends over multiple metrics and attack types. Include
 - `HeatMapBetweeniOSAndAndroid.py`: heatmaps of success rate variance
 - `performance_NumberOfBehaviorCategories.py`: impact of behavior richness on performance
 - All outputs rendered as high-res charts for comparison
-
+<img src="./docs/image.png">
 
