@@ -83,7 +83,7 @@ SecuDevSLM/
 The `hulla` module is designed to systematically evaluate hallucination behaviors in large language models (SLMs) under various adversarial strategies. It includes two major subsystems:
 
 ### 1. NeuroCognitiveDeceptionEngine (Long-Form Cognitive Attack)
-
+<img src="./docs/fig3.png">
 This engine simulates scientific discourse across neuroscience, biotechnology, and quantum domains to incrementally induce credible yet fabricated content. Key features:
 
 - Multi-turn deception cascades with escalating context
