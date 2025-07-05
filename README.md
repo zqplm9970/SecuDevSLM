@@ -70,17 +70,56 @@ To prepare all **58 Small Language Models (SLMs)** for evaluation on edge platfo
 
 ```bash
 SecuDevSLM/
-├── detection/            # Detection and evaluation logic
-├── dataset/              # Corpus and prompt template dictionaries
-├── evaluation/           # Metric calculations and scoring
-├── configs/              # Platform and model configurations
-├── scripts/              # Utility scripts
-├── docs/                 # Documentation and technical reports
-└── README.md
+├── docs/                          # Documentation files
+├── resource/                      # Core resource directory
+│   ├── data_analysis/            # Data analysis logic
+│   │   └── DataAnalysis/         # Scripts and visualization for analysis
+│   ├── hulla/                    # Hallucination attack modules
+│   └── jailbreak/                # Jailbreak attack modules
+├── model_config.py               # Script for model platform registration
+└── README.md                     # Project overview
 ```
 ## ✳️ Hallucination  Overview
+The `hulla` module is designed to systematically evaluate hallucination behaviors in large language models (SLMs) under various adversarial strategies. It includes two major subsystems:
 
+### 1. NeuroCognitiveDeceptionEngine (Long-Form Cognitive Attack)
 
+This engine simulates scientific discourse across neuroscience, biotechnology, and quantum domains to incrementally induce credible yet fabricated content. Key features:
+
+- Multi-turn deception cascades with escalating context
+- Dynamic strategy scheduling (reverse prompt, recursive logic, counterfactual scenario, etc.)
+- Automatic scoring on similarity, contradiction, confidence, and scientific plausibility
+- Early stopping on critical success and JSON-based report generation
+
+**Example Usage:**
+
+<pre><code class="python">
+from hulla.neuro_induction import AdvancedHallucinationTester
+
+tester = AdvancedHallucinationTester(depth=4)
+tester.execute_full_test_battery()
+</code></pre>
+
+---
+
+### 2. multilingual_semantic_noise_attack_with_context (Multilingual Semantic Noise Attack)
+
+This component constructs high-entropy multilingual prefixes using words from 15+ languages and special symbols to pollute input prompts. Despite preserving the original input semantics, it induces hallucinated or broken outputs.
+
+- Supports randomized word sampling across multiple languages
+- Adds semantic-irrelevant noise tokens to context
+- Configurable noise length, number of attack rounds, and maximum output length
+- Includes test interfaces to measure model performance before/after attacks
+
+**Example Usage:**
+
+<pre><code class="python">
+from hulla.semantic_noise_attack import main
+
+main(model_name="Qwen/Qwen2.5-1.8B")
+</code></pre>
+
+---
 
 ## 🔓 Jailbreaking  Overview
 This submodule is designed to simulate real-world jailbreak attacks on on-device SLMs and systematically evaluate model robustness when facing sensitive topics. It features a **fully local, unified attack generation and evaluation framework** that avoids dependency on external LLM APIs and supports scalable deployment in resource-constrained environments.(Full details show in [jailbreak content](./resource/jailbreak/utils/README.md) [jailbreak code](./resource/jailbreak/README.md))
