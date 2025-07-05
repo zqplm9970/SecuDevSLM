@@ -100,10 +100,9 @@ tester = AdvancedHallucinationTester(depth=4)
 tester.execute_full_test_battery()
 </code></pre>
 
----
 
 ### 2. multilingual_semantic_noise_attack_with_context (Multilingual Semantic Noise Attack)
-
+<img src="./docs/image.png">
 This component constructs high-entropy multilingual prefixes using words from 15+ languages and special symbols to pollute input prompts. Despite preserving the original input semantics, it induces hallucinated or broken outputs.
 
 - Supports randomized word sampling across multiple languages
