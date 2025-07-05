@@ -60,6 +60,8 @@ Where:
 
 This formulation reflects both the scale and variety of training data, and their compound effect on model robustness and safety under adversarial attacks.
 
+To prepare all **58 Small Language Models (SLMs)** for evaluation on edge platforms (iOS/Android), run the configuration script to register each model with the proper runtime environment. This step ensures that models are recognized by the inference engine and associated with platform-specific settings such as quantization, tokenizer path, and device context.
+<pre> bash python model_config.py --platform android --model Qwen/Qwen2.5-1.5B  </pre>
 📄 *Full model list is available in [Appendix](./docs/Appendix.pdf).*
 
 ---
