@@ -46,7 +46,6 @@ def load_models_sequentially(model_list):
 
 
 if __name__ == "__main__":
-    # 模型名称列表
     model_list = [
         "google/gemma-2-2b-jpn-it", "microsoft/phi-2", "ibm-granite/granite-3.0-2b-base",
         "Qwen/Qwen2.5-1.5B", "google/flan-t5-xl", "Qwen/Qwen2-1.5B", "google/gemma-2-2b",
