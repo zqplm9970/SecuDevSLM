@@ -216,7 +216,7 @@ def multilingual_semantic_noise_attack_with_context(model, tokenizer, noise_leng
         context += " " + noise_input
         print(f"{noise_input}")
 
-        inputs = tokenizer(context.strip(), return_tensors="pt")  # 使用累积上下文
+        inputs = tokenizer(context.strip(), return_tensors="pt") 
         outputs = model.generate(**inputs, max_length=max_length, do_sample=True, top_k=50)
         response = tokenizer.decode(outputs[0], skip_special_tokens=True)
         print(f" {response}\n")
@@ -254,7 +254,7 @@ def evaluate_attack_and_performance(
     context, attack_responses = multilingual_semantic_noise_attack_with_context(
         model, tokenizer, noise_length=noise_length, max_length=max_length, attack_times=attack_times
     )
-    # 测试阶段
+
     performance_responses = test_model_performance_with_context(
         model, tokenizer, test_inputs, context, max_length=max_length
     )
@@ -264,7 +264,7 @@ def evaluate_attack_and_performance(
 
 def main(model_name="model_name"):
     model, tokenizer=load_model_and_tokenizer(model_name=model_name)
-    # 示例调用
+
     results = evaluate_attack_and_performance(
         model,
         tokenizer,
