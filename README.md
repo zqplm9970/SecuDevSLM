@@ -70,16 +70,41 @@ To prepare all **58 Small Language Models (SLMs)** for evaluation on edge platfo
 
 ```bash
 SecuDevSLM/
-├── docs/                          # Documentation files
+├── docs/                          # Documentation files (user guides, specs, reports)
 ├── resource/                      # Core resource directory
-│   ├── data_analysis/            # Data analysis logic
-│   │   └── DataAnalysis/         # Scripts and visualization for analysis
-│   ├── hulla/                    # Hallucination attack modules
-│   └── jailbreak/                # Jailbreak attack modules
-├── model_config.py               # Script for model platform registration
-└── README.md                     # Project overview
+│   ├── data_analysis/             # Data analysis logic
+│   │   └── DataAnalysis/          # Scripts and visualizations for metric evaluation
+│   ├── hulla/                     # Hallucination attack modules (e.g., long_query.py, short_noisy_query.py)
+│   └── jailbreak/                 # Jailbreak and alignment bypass attack modules
+├── model_config.py                # Model registration and platform-specific loading logic
+├── requirements.txt               # Python dependencies for hallucination/jailbreak testing
+└── README.md                      # Project overview and usage instructions
 ```
 ### Requirements
+```bash
+# Step 1: Create a virtual environment
+python -m venv venv
+
+# Step 2: Activate the environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# Step 3: Upgrade pip and install dependencies
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+or using conda
+```bash
+# Step 1: Create a new environment
+conda create -n huall_env python=3.10 -y
+conda activate huall_env
+
+# Step 2: Install dependencies
+pip install --upgrade pip
+pip install -r requirements.txt
+```
 
 ## ✳️ Hallucination  Overview
 The `hulla` module is designed to systematically evaluate hallucination behaviors in large language models (SLMs) under various adversarial strategies. It includes two major subsystems:
