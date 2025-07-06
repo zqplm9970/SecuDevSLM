@@ -1,7 +1,7 @@
 import os
 from sentence_transformers import SentenceTransformer, util
 import json
-import torch  # 确保 torch 正确安装
+import torch  
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
