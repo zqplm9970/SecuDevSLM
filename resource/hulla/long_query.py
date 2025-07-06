@@ -18,7 +18,7 @@ class NeuroCognitiveDeceptionEngine:
 
         self._init_knowledge_base()
 
-        self.depth_factor = max(1, depth_factor)  # 复杂度乘数
+        self.depth_factor = max(1, depth_factor)  
         self.conversation_history = []
         self.strategy_log = []
         self.metrics = {
