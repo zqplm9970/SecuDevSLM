@@ -46,6 +46,12 @@ This module performs robustness stress testing by injecting multilingual and sym
 - Mix random terms from 15+ languages
 - Add emoji, math, ASCII/Unicode noise
 - Evaluate whether the LLM responds confidently to garbage input
+
+
+| Module                 | Attack Type        | Goal                                         | Use Case                    |
+| ---------------------- | ------------------ | -------------------------------------------- | --------------------------- |
+| `long_query.py`        | Reasoning/semantic | Induce confident hallucination via discourse | Scientific QA hallucination |
+| `short_noisy_query.py` | Noise injection    | Stress test model’s response integrity       | Robustness & overconfidence |
 ### Usage
 ```bash
 python short_noisy_query.py
