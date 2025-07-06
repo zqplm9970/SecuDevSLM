@@ -79,6 +79,8 @@ SecuDevSLM/
 ├── model_config.py               # Script for model platform registration
 └── README.md                     # Project overview
 ```
+### Requirements
+
 ## ✳️ Hallucination  Overview
 The `hulla` module is designed to systematically evaluate hallucination behaviors in large language models (SLMs) under various adversarial strategies. It includes two major subsystems:
 
