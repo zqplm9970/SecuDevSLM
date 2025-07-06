@@ -1,0 +1,19 @@
+# Core libraries
+torch>=1.13.0
+transformers>=4.30.0
+sentence-transformers>=2.2.2
+textblob>=0.17.1
+tqdm>=4.65.0
+numpy>=1.23.0
+pandas>=1.5.0
+scikit-learn>=1.2.0
+matplotlib>=3.7.0
+
+# Optional model/data configuration
+pydantic>=1.10.0
+
+# For multilingual text handling
+regex>=2022.10.31
+
+# Ensure basic plotting and metrics work
+seaborn>=0.12.0
